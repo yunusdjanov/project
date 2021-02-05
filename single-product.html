@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bars.css">
+    <link rel="stylesheet" href="css/single-product.css">
+    <link rel="stylesheet" href="css/product.css">
+
+    <link rel="stylesheet" href="css/footer.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="libra/fontawesome-free-5.15.1-web/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- ---------- topbar -----------  -->
+
+    <div class="top-bar container">
+
+        <div class="t-b-content d-flex justify-content-end col-12 pt-2 pb-2">
+            <div class="dropdown">
+                <button class="btn" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    RU
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </button>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#">UZ</a></li>
+                    <li><a class="dropdown-item" href="#">ENG</a></li>
+                </ul>
+            </div>
+
+            <a href="#" class="text-color nav-link">Доставка</a>
+            <a href="#" class="text-color nav-link">Контакты</a>
+
+        </div>
+
+    </div>
+
+    <!-- ---------- main navbar -----------  -->
+
+    <nav class="navbar  navbar-light container">
+
+        <div class="img-logo">
+            <svg width="74" height="74" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <rect width="74" height="74" fill="url(#pattern0)" />
+                <defs>
+                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0" transform="scale(0.00833333)" />
+                    </pattern>
+                    <image id="image0" width="120" height="120"
+                        xlink:href="data:image/png;base64,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" />
+                </defs>
+            </svg>
+        </div>
+
+        <div class="search-box">
+            <button class="icon-color btn" type="button">
+                <i class="fa fa-search icon-color" aria-hidden="true"></i>
+            </button>
+            <input type="text" placeholder="search...">
+            <button class="icon-color btn" type="button">
+                <i class="fa fa-times icon-color" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <div class="n-links">
+            <a href="#" class="text-color nav-link">
+                <svg width="15" height="22" viewBox="0 0 15 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M9.22084 14.4344C9.04078 14.5446 8.98384 14.7804 9.09344 14.9611C9.47787 15.5951 10.1493 15.9738 10.8891 15.9738C12.3877 15.9738 13.6006 17.1919 13.6006 18.6976V20.6667C13.6006 20.8782 13.7714 21.05 13.9824 21.05C14.1935 21.05 14.3643 20.8782 14.3643 20.6667V18.6976C14.3643 16.7685 12.81 15.2071 10.8891 15.2071C10.4179 15.2071 9.99068 14.9663 9.74574 14.5624L9.70298 14.5883L9.74573 14.5624C9.63607 14.3816 9.40104 14.3241 9.22084 14.4344ZM9.22084 14.4344L9.24694 14.4771L9.22083 14.4344C9.22083 14.4344 9.22084 14.4344 9.22084 14.4344ZM8.77784 16.1165L8.74715 16.077C8.91403 15.9472 9.15394 15.978 9.28298 16.1454L9.24338 16.176L9.28298 16.1454C9.41196 16.3128 9.38155 16.5534 9.21484 16.6831L7.82825 17.7613C7.69061 17.8684 7.49825 17.8684 7.36057 17.7614L7.39125 17.7219L7.36056 17.7613L4.93551 15.8755C4.72987 15.9407 4.51604 15.9738 4.29972 15.9738C2.80114 15.9738 1.58822 17.1919 1.58822 18.6976V20.6667C1.58822 20.8782 1.41746 21.05 1.20637 21.05C0.995285 21.05 0.824525 20.8782 0.824525 20.6667V18.6976C0.824525 17.5058 1.41501 16.4498 2.34269 15.8127C0.441347 14.2311 0.0772867 11.4898 1.41707 9.46945L1.45874 9.49708L1.41707 9.46945C1.84357 8.8264 2.06895 8.07823 2.06895 7.30554V5.50017C2.06895 2.99139 4.10083 0.95 6.59889 0.95H8.58997C11.088 0.95 13.1199 2.99131 13.1199 5.5V7.30554C13.1199 8.08061 13.3439 8.82654 13.7675 9.46301C14.8474 11.0857 14.8461 13.2161 13.7294 14.8437C13.6097 15.0181 13.3719 15.0621 13.1982 14.9419L13.1982 14.9419C13.0245 14.8217 12.981 14.5831 13.1005 14.4088C14.0381 13.0421 14.04 11.2525 13.1325 9.88891C12.6246 9.12581 12.3563 8.2324 12.3563 7.30554V5.5C12.3563 3.4137 10.6665 1.71667 8.59001 1.71667H6.59893C4.52247 1.71667 2.83269 3.41378 2.83269 5.50017V7.30571C2.83269 8.25872 2.54676 9.14954 2.05285 9.89426C0.920215 11.602 1.23147 13.9458 2.89198 15.2733L2.86075 15.3124L2.89198 15.2733L3.08395 15.4268C3.47304 15.2811 3.88344 15.2071 4.29977 15.2071C5.03876 15.2071 5.63635 14.6088 5.63635 13.8679V13.8113C4.13987 13.0796 3.10602 11.5365 3.10602 9.75521V7.41667C3.10602 7.20518 3.27678 7.03333 3.48786 7.03333C3.69895 7.03333 3.86971 7.20518 3.86971 7.41667V9.75517C3.86971 11.8185 5.54087 13.4968 7.59447 13.4968C9.64807 13.4968 11.3192 11.8185 11.3192 9.75517V7.80633C10.5258 7.74342 9.85674 7.24098 9.59702 6.35704C8.90249 6.79801 8.16347 7.16249 7.39304 7.44355C6.77865 7.66771 6.20143 7.81294 5.77127 7.90216C5.55614 7.94677 5.37764 7.97741 5.24946 7.99691C5.18537 8.00666 5.13378 8.01364 5.09641 8.0182C5.06074 8.02255 5.03474 8.02513 5.02448 8.02513C4.83682 8.02513 4.67342 7.88642 4.64672 7.69486C4.64672 7.69486 4.64672 7.69486 4.64672 7.69486L8.77784 16.1165ZM8.77784 16.1165L8.74714 16.077L7.59439 16.9734M8.77784 16.1165L7.59439 16.9734M7.59439 16.9734L5.66201 15.4707M7.59439 16.9734L5.66201 15.4707M5.66201 15.4707C6.0643 15.1263 6.32854 14.6439 6.38714 14.0976C6.77147 14.2055 7.17634 14.2635 7.59443 14.2635C10.0696 14.2635 12.0829 12.2409 12.0829 9.75517C12.0829 9.74224 12.083 9.15874 12.083 8.5753L12.0827 7.77141L5.66201 15.4707ZM12.0817 7.39229C12.0687 7.18492 11.8965 7.03329 11.701 7.03329C11.692 7.03329 11.6771 7.03472 11.6573 7.03663C11.5293 7.04892 11.194 7.08116 10.8609 6.87987C10.5632 6.69997 10.4119 6.41182 10.3351 6.16339C10.2968 6.03947 10.2774 5.92663 10.2676 5.84432C10.2627 5.8032 10.2602 5.76983 10.259 5.74664C10.2578 5.72408 10.2577 5.71133 10.2577 5.71062C10.2577 5.7106 10.2577 5.71058 10.2577 5.71059L10.2077 5.71033L12.0817 7.39229Z"
+                        fill="#148C84" stroke="#148C84" stroke-width="0.1" />
+                </svg>
+                Личный кабинет
+            </a>
+            <a href="#" class="text-color nav-link">
+                <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M8.99998 16.9986C8.74373 16.9986 8.49667 16.9058 8.30414 16.7371C7.57698 16.1013 6.87592 15.5038 6.25739 14.9767L6.25423 14.974C4.4408 13.4286 2.87484 12.094 1.78527 10.7794C0.567305 9.30968 0 7.9162 0 6.39391C0 4.91487 0.507155 3.55037 1.42795 2.55157C2.35972 1.54097 3.63825 0.984375 5.02843 0.984375C6.06746 0.984375 7.01901 1.31287 7.85658 1.96065C8.27928 2.28763 8.66243 2.68781 8.99998 3.15459C9.33767 2.68781 9.72068 2.28763 10.1435 1.96065C10.9811 1.31287 11.9326 0.984375 12.9717 0.984375C14.3617 0.984375 15.6404 1.54097 16.5722 2.55157C17.4929 3.55037 18 4.91487 18 6.39391C18 7.9162 17.4328 9.30968 16.2148 10.7792C15.1253 12.094 13.5594 13.4285 11.7463 14.9737C11.1267 15.5016 10.4245 16.1001 9.69569 16.7374C9.50329 16.9058 9.2561 16.9986 8.99998 16.9986ZM5.02843 2.03879C3.93626 2.03879 2.93293 2.47467 2.20303 3.26624C1.46228 4.06975 1.05427 5.18047 1.05427 6.39391C1.05427 7.67422 1.53012 8.81927 2.59703 10.1066C3.62823 11.3509 5.16205 12.658 6.93799 14.1715L6.94129 14.1743C7.56215 14.7034 8.26596 15.3033 8.99847 15.9438C9.73538 15.302 10.4403 14.7012 11.0624 14.1713C12.8382 12.6578 14.3719 11.3509 15.4031 10.1066C16.4698 8.81927 16.9457 7.67422 16.9457 6.39391C16.9457 5.18047 16.5377 4.06975 15.7969 3.26624C15.0672 2.47467 14.0637 2.03879 12.9717 2.03879C12.1716 2.03879 11.437 2.29312 10.7884 2.79465C10.2104 3.24179 9.80775 3.80704 9.57168 4.20255C9.45028 4.40593 9.2366 4.52733 8.99998 4.52733C8.76336 4.52733 8.54968 4.40593 8.42828 4.20255C8.19235 3.80704 7.7897 3.24179 7.21155 2.79465C6.56294 2.29312 5.82837 2.03879 5.02843 2.03879Z"
+                        fill="#13B196" />
+                </svg>
+
+                Избранное
+            </a>
+
+            <a href="#" class="text-color nav-link">
+                <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0.515412 1.06786H2.56975L3.8904 11.4735C3.91486 11.6722 4.0616 11.846 4.23279 11.9205C4.0616 12.2185 3.96377 12.5662 3.96377 12.9387C3.96377 14.0811 4.86866 15 5.99366 15C7.11866 15 8.02355 14.0811 8.02355 12.9387C8.02355 12.5662 7.92572 12.2434 7.77898 11.9453H10.2735C10.1023 12.2434 10.029 12.591 10.029 12.9387C10.029 14.0811 10.9339 15 12.0589 15C13.1839 15 14.0887 14.0811 14.0887 12.9387C14.0887 12.4917 13.942 12.0447 13.6974 11.7218C13.7464 11.6473 13.7953 11.5232 13.7953 11.4238C13.7953 11.1258 13.5507 10.9023 13.2817 10.9023H4.91758L4.79529 9.90892H13.6974C13.942 9.90892 14.1377 9.75991 14.211 9.51157L16.0208 2.80627C16.0697 2.65726 16.0208 2.48342 15.923 2.33441C15.8252 2.21024 15.6784 2.13574 15.5072 2.13574H3.81703L3.62138 0.496665C3.59693 0.223486 3.37682 0.0248108 3.1078 0.0248108H0.588781C0.295303 0.0248108 0.0751953 0.273155 0.0751953 0.546334C0.0751953 0.844347 0.31976 1.06786 0.588781 1.06786H0.515412ZM5.99366 13.9321C5.45562 13.9321 5.0154 13.4851 5.0154 12.9387C5.0154 12.3924 5.45562 11.9453 5.99366 11.9453C6.5317 11.9453 6.97192 12.3924 6.97192 12.9387C6.97192 13.4851 6.5317 13.9321 5.99366 13.9321ZM12.0344 13.9321C11.4964 13.9321 11.0561 13.4851 11.0561 12.9387C11.0561 12.3924 11.4964 11.9453 12.0344 11.9453C12.5724 11.9453 13.0127 12.3924 13.0127 12.9387C13.0127 13.4851 12.5724 13.9321 12.0344 13.9321ZM14.7735 3.17878L13.2572 8.8162H4.6241L3.91486 3.17878H14.798H14.7735Z"
+                        fill="#13B196" />
+                </svg>
+
+
+                Корзина
+            </a>
+        </div>
+
+    </nav>
+
+
+    <!-- ---------- downside bar -----------  -->
+
+    <div id="nd-bar">
+        <div class="down-bar container d-none d-lg-flex">
+
+            <a href="#" class="text-color nav-link">Лицо</a>
+            <a href="#" class="text-color nav-link">Глаза</a>
+            <a href="#" class="text-color nav-link">Волосы</a>
+            <a href="#" class="text-color nav-link">Тело</a>
+            <a href="#" class="text-color nav-link">Маникюрные инструменты</a>
+            <a href="#" class="text-color nav-link">Декоративная косметика</a>
+            <a href="#" class="text-color nav-link">Гаджеты</a>
+            <a href="#" class="text-color nav-link">Аксессуары</a>
+
+
+        </div>
+        <div class="down-select d-flex d-lg-none">
+            <div class="dropdown pl-2 pr-2">
+                <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Все категории
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li>
+                        <a class="dropdown-item" href="#">Лицо</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Глаза</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Волосы</a></li>
+
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            Тело
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            Маникюрные инструменты
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            Декоративная косметика
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            Гаджеты
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            Аксессуары
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section class="product d-flex justify-content-between container text-start mt-5">
+        <div class="product-img">
+            <img src="imgs/p11.jpg" alt="item">
+        </div>
+        <div class="product-description">
+            <h3 class="product-name">
+                Jmsolution Сыворотка 3 в 1 с экстрактом икры и золотом Active Golden Caviar All In One Ampoule Prime 1
+                саше
+                - 2 мл
+            </h3>
+            <div class="rating">
+                <i class="fa fa-star text-danger" aria-hidden="true"></i>
+                <i class="fa fa-star text-danger" aria-hidden="true"></i>
+                <i class="fa fa-star text-danger" aria-hidden="true"></i>
+                <i class="fa fa-star text-danger" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <br>
+            </div>
+            <div class="details d-flex justify-content-between align-items-center my-3">
+                <div class="product-price d-flex align-items-center">
+                    <span class="price">3000uzs</span>
+                    <span class="mx-5">v nalichii</span>
+                </div>
+                <div class="product-btn d-flex align-items-center">
+                    <button class="add-to-cart btn btn-primary">Добавить в корзину</button>
+                    <div class="btn-like">
+                        <img src="imgs/like.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center sub-details">
+                <span class="sub-label">Nalichii</span>
+                <span>Na sklade: <span class="amount">500</span></span>
+                <a href="#">v magazin</a>
+            </div>
+            <div>
+                <div class="my-5">
+                    <h4>Opisanie</h4>
+                    <p>Эликсир здоровья и молодости кожи – ампульный концентрат Active Golden Caviar All
+                        In One Ampoule Prime с 24К золотом и икрой от корейского бренда JM solution
+                        – идеальный выбор для домашнего ухода за тусклой, увядающей, сухой кожей.
+                        Средство интенсивно увлажняет, борется с раздражением, питает, убирает
+                        шелушения, выравнивает тони/микрорельеф, обеспечивает лифтинг-эффект,
+                        помогает избавиться от морщин и возрастной пигментации, замедляет старение, придает лицу
+                        ухоженный
+                        вид.</p>
+
+                </div>
+                <details class="filters faq__detail">
+                    <summary class="filters__title faq__summary"><span class="faq__question">
+                            Состав</span>
+                    </summary>
+                    <div class="faq__text">
+
+                    </div>
+                </details>
+                <details class="filters faq__detail">
+                    <summary class="filters__title faq__summary"><span class="faq__question">Характеристики</span>
+                    </summary>
+                    <div class="faq__text">
+
+                    </div>
+                </details>
+                <details class="filters faq__detail">
+                    <summary class="filters__title faq__summary"><span class="faq__question">
+                            Отзывы о товаре</span>
+                    </summary>
+                    <div class="faq__text">
+
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- -------------- footer ------------------ -->
+    <footer class="p-5">
+        <div class="container f-content">
+            <div class="f-right">
+                <img src="imgs/nabi.png" alt="" class="f-logo">
+                <div class="d-flex flex-column">
+                    <h4 class="text-light">ИНФОРМАЦИЯ</h4>
+                    <a href="#" class="btn text-light">Контакты</a>
+                    <a href="#" class="btn text-light">О нас</a>
+                    <a href="#" class="btn text-light">Публичная оферта</a>
+                </div>
+            </div>
+
+            <div class="f-left">
+                <div class="social-links">
+                    <h4 class="text-light text-center">МЫ В СОЦИАЛЬНЫХ СЕТЯХ</h4>
+                    <div class="d-flex">
+                        <a href="#" class="text-light fs-4 m-3"><i class="fab fa-telegram" aria-hidden="true"></i></a>
+                        <a href="#" class="text-light fs-4 m-3"><i class="fab fa-telegram" aria-hidden="true"></i></a>
+                        <a href="#" class="text-light fs-4 m-3"><i class="fab fa-telegram" aria-hidden="true"></i></a>
+                    </div>
+                    <h5 class="text-light text-center">Мы принимаем:</h5>
+                    <div class="d-flex">
+                        <button class="m-1 btn btn-light">
+                            <img src="imgs/payme-logo 1.jpg" alt="">
+                        </button>
+                        <button class="m-1 btn btn-light">
+                            <img src="imgs/click-logo-PNG-1920x700 1.jpg" alt="">
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script src="libra/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
